@@ -200,6 +200,13 @@ body {
 
 /* about section */
 
+.about-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header-h2 {
   font-weight: 700;
   font-size: 48px;
@@ -219,4 +226,44 @@ body {
   text-align: center;
   width: 100%;
   color: var(--mainColor);
+  margin-bottom: 32px;
+}
+
+.about-el {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 16px));
+  grid-gap: 32px;
+}
+
+.about-el:first-of-type {
+  margin-bottom: 48px;
+}
+
+.about-img {
+  height: 100%;
+  width: 100%;
+}
+
+.about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-el-header {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 52px;
+
+  margin-bottom: 24px;
+}
+
+.about-el-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about-el-text:first-of-type {
+  margin-bottom: 8px;
 }
