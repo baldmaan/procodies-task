@@ -1,0 +1,25 @@
+:root {
+  --bgColor: #ffffff;
+  --mainColor: #006340;
+  --fontColor: #293632;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  background-color: var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--fontColor);
+  overflow: hidden;
+}
