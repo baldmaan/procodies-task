@@ -14,10 +14,95 @@
   </head>
   <body>
     <main class="main">
-      <section class="form-section"></section>
-      <section class="about-section"></section>
+      <section class="form-section">
+        <div class="images">
+          <div class="main-img"></div>
+          <div class="images-gallery">
+            <div class="gallery-img img-1"></div>
+            <div class="gallery-img img-2"></div>
+            <div class="gallery-img img-3"></div>
+          </div>
+        </div>
+        <div class="header-form-wrapper">
+          <h1 class="header-h1">Chance to win a StockX Mystery Box today!</h1>
+          <p class="form-section-text">
+            Unleash the Excitement of Mystery Electronics
+          </p>
+          <form class="form">
+            <h3 class="form-header">Enter details</h3>
+            <div class="form-controls">
+              <input type="text" class="form-input" placeholder="First name" />
+              <input type="text" class="form-input" placeholder="Last name" />
+              <input
+                type="text"
+                class="form-input input-full-width"
+                placeholder="Street"
+              />
+              <input type="text" class="form-input" placeholder="Postal code" />
+              <input type="text" class="form-input" placeholder="City" />
+              <input
+                type="tel"
+                class="form-input input-full-width"
+                placeholder="Phone number"
+              />
+              <input
+                type="email"
+                class="form-input input-full-width"
+                placeholder="E-mail"
+              />
+            </div>
+
+            <button type="submit" class="submit-btn">Proceed to payment</button>
+            <div class="secure-images">
+              <img
+                class="secure-img"
+                src="./images/mc-afee.png"
+                alt="McAfee secure img"
+              />
+              <img
+                class="secure-img"
+                src="./images/truste.png"
+                alt="TRUSTe verified img"
+              />
+              <img
+                class="secure-img"
+                src="./images/256bit.png"
+                alt="SSL 256 bit encryption img"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="about-section">
+        <h2 class="header-h2">Top Tech Mystery Box at Unbeatable Prices</h2>
+        <p class="about-subheader">
+          Fast shipping | Easy returns | Special discounts for students
+        </p>
+      </section>
       <section class="faq-section"></section>
       <section class="cards-section"></section>
     </main>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const mainImg = document.querySelector(".main-img");
+      const galleryImgs = document.querySelectorAll(".gallery-img");
+
+      galleryImgs.forEach((img) => {
+        img.addEventListener("click", () => {
+          // Remove all specific image classes from main-img
+          mainImg.classList.remove("img-1", "img-2", "img-3");
+
+          // Add the class corresponding to the clicked image
+          if (img.classList.contains("img-1")) {
+            mainImg.classList.add("img-1");
+          } else if (img.classList.contains("img-2")) {
+            mainImg.classList.add("img-2");
+          } else if (img.classList.contains("img-3")) {
+            mainImg.classList.add("img-3");
+          }
+        });
+      });
+    });
+  </script>
 </html>
