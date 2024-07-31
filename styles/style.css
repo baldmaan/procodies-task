@@ -82,6 +82,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.7;
 }
 
 .img-1 {
@@ -94,6 +96,18 @@ body {
 
 .img-3 {
   background-image: url("../images/gallery-3.webp");
+}
+
+/* Full opacity for active gallery image */
+.main-img.img-1 ~ .images-gallery .img-1,
+.main-img.img-2 ~ .images-gallery .img-2,
+.main-img.img-3 ~ .images-gallery .img-3 {
+  opacity: 1;
+}
+
+/* Change opacity on hover */
+.gallery-img:hover {
+  opacity: 1;
 }
 
 .header-h1 {
@@ -156,14 +170,17 @@ body {
   transition: border-color 0.3s ease;
   color: var(--mainColorSec);
 }
+
 .form-input::placeholder {
   color: #808080;
 }
+
 .form-input:hover,
 .form-input:active,
 .form-input:focus {
   border-color: var(--mainColorSec);
 }
+
 .form-input:focus::placeholder {
   color: var(--mainColorSec);
 }
@@ -190,7 +207,6 @@ body {
 }
 
 .secure-images {
-  width: 314px;
   height: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -325,4 +341,121 @@ body {
 
 .credit-cards-img {
   height: 40px;
+}
+
+@media screen and (max-width: 1050px) {
+  .form-section {
+    grid-template-columns: 1fr;
+  }
+
+  .header-h1 {
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 42px;
+    margin-bottom: 8px;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .images-gallery {
+    width: 100%;
+  }
+
+  .gallery-img {
+    border: 1px solid var(--mainColor);
+    border-radius: 14px;
+    width: 132px;
+    height: 132px;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .header-h2 {
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .about-el {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-el:nth-of-type(2) {
+    flex-direction: column-reverse;
+  }
+
+  .about-img {
+    max-width: 500px;
+  }
+  .about-el-header {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main-img {
+    width: 280px;
+    height: 280px;
+  }
+  .images-gallery {
+    justify-content: center;
+  }
+  .gallery-img {
+    width: 92px;
+    height: 92px;
+    margin: 10px;
+  }
+  .form-header {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .form-input {
+    border: 1px solid #adadad;
+    border-radius: 7px;
+    padding: 9px 13px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .form-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    width: 100%;
+  }
+
+  .faq-content {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .gallery-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .secure-img {
+    height: 30px;
+  }
+  .credit-cards-img {
+    height: 30px;
+  }
 }
