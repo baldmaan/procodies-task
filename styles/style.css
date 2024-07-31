@@ -41,6 +41,7 @@ body {
   max-width: calc(var(--contentMaxWidth) + 2 * var(--mainPadding));
   padding: 0 var(--mainPadding);
 }
+
 /* form section */
 
 .form-section {
@@ -48,7 +49,7 @@ body {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  grid-gap: 16px;
+  grid-gap: 21px;
   margin-bottom: 48px;
 }
 
@@ -64,6 +65,37 @@ body {
   margin-bottom: 16px;
   transition: background-image 0.2s ease-in-out,
     background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+}
+
+.main-img-price-label {
+  position: absolute;
+  top: -16px;
+  right: -5px;
+  border-radius: 50%;
+  background: var(--mainColor);
+  color: #ffffff;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-img-price-label > p {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 45px;
+  text-align: center;
+
+  margin-bottom: 8px;
+}
+
+.main-img-price-label > span {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
 
 .images-gallery {
@@ -279,6 +311,10 @@ body {
   margin-bottom: 24px;
 }
 
+.about-el-header > span {
+  color: var(--mainColor);
+}
+
 .about-el-text {
   font-weight: 400;
   font-size: 16px;
@@ -401,6 +437,7 @@ body {
   .about-img {
     max-width: 500px;
   }
+
   .about-el-header {
     font-size: 28px;
     line-height: 36px;
@@ -412,14 +449,22 @@ body {
     width: 280px;
     height: 280px;
   }
+
+  .main-img-price-label > p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
   .images-gallery {
     justify-content: center;
   }
+
   .gallery-img {
     width: 92px;
     height: 92px;
     margin: 10px;
   }
+
   .form-header {
     font-size: 24px;
     line-height: 32px;
@@ -455,6 +500,7 @@ body {
   .secure-img {
     height: 30px;
   }
+
   .credit-cards-img {
     height: 30px;
   }
